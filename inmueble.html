@@ -6,9 +6,16 @@
   <title>3 Norte 88 · Venta del Inmueble · Viña del Mar</title>
   <meta name="description" content="Venta 3 Norte 88 esquina 6 Poniente, Viña del Mar. 335,44 m² en esquina, a pasos del Casino. Dominio limpio. Precio a convenir.">
   <style>
-    :root { --ink: #161310; --cream: #f4efe6; --wine: #6e2b28; --gold: #b8945a; --gold-soft: #d4bc8a; --muted: #6b635a; --line: #e0d6c8; --white: #fffdf9; }
+    :root {
+      --ink: #161310; --cream: #f4efe6; --wine: #6e2b28; --gold: #b8945a;
+      --gold-soft: #d4bc8a; --muted: #6b635a; --line: #e0d6c8; --white: #fffdf9;
+    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; background: var(--cream); color: var(--ink); line-height: 1.55; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: var(--cream); color: var(--ink); line-height: 1.55; font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
     .wrap { width: min(880px, calc(100% - 2rem)); margin: 0 auto; }
     .hero { background: var(--ink); color: var(--cream); padding: 2.6rem 0 2.2rem; }
     .hero .eyebrow { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-soft); margin-bottom: 0.9rem; }
@@ -20,13 +27,18 @@
     .section-title { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--wine); margin-bottom: 0.5rem; }
     h2 { font-family: Georgia, serif; font-weight: 500; font-size: 1.5rem; margin-bottom: 0.75rem; line-height: 1.25; }
     .lead { font-size: 1.05rem; color: #3a322b; max-width: 40em; margin-bottom: 1.6rem; }
-    .pitch { background: var(--white); border-left: 3px solid var(--wine); padding: 1.1rem 1.2rem; margin-bottom: 1.8rem; font-size: 15px; color: #3a322b; }
+    .pitch {
+      background: var(--white); border-left: 3px solid var(--wine);
+      padding: 1.1rem 1.2rem; margin-bottom: 1.8rem; font-size: 15px; color: #3a322b;
+    }
     .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 0 0 1.8rem; }
     @media (min-width: 560px) { .stats { grid-template-columns: repeat(4, 1fr); } }
     .stat { background: var(--white); padding: 1.15rem 0.9rem; text-align: center; }
     .stat b { display: block; font-family: Georgia, serif; font-size: 1.35rem; font-weight: 500; margin-bottom: 0.25rem; }
     .stat span { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-    .loc { background: var(--ink); color: var(--cream); padding: 1.4rem 1.2rem; margin: 0 0 1.8rem; }
+    .loc {
+      background: var(--ink); color: var(--cream); padding: 1.4rem 1.2rem; margin: 0 0 1.8rem;
+    }
     .loc h3 { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-soft); margin-bottom: 0.7rem; }
     .loc p { font-size: 14.5px; color: #cfc4b6; margin-bottom: 0.6rem; line-height: 1.5; }
     .loc a { color: var(--gold-soft); }
@@ -39,16 +51,38 @@
     .docs a:last-child { border-bottom: none; }
     .cta { background: var(--white); border: 1px solid var(--line); padding: 1.5rem 1.3rem; }
     .cta .label { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
-    .cta strong { display: block; font-size: 1.15rem; margin-bottom: 0.3rem; }
+    .cta strong { display: block; font-size: 1.15rem; margin-bottom: 0.15rem; }
+    .cta .role { font-size: 13px; color: var(--muted); margin-bottom: 0.7rem; }
     .cta a { color: var(--wine); text-decoration: none; border-bottom: 1px solid var(--gold); }
+    .cta .wa {
+      display: inline-block;
+      margin-top: 0.9rem;
+      background: #128C7E;
+      color: #fff !important;
+      border-bottom: none !important;
+      padding: 0.75rem 1.15rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
     .cta .note { margin-top: 1rem; font-size: 13px; color: var(--muted); }
+    .mapwrap { margin: 0 0 1.8rem; border: 1px solid var(--line); overflow: hidden; background: var(--white); }
+    .mapwrap iframe { display: block; width: 100%; height: 240px; border: 0; }
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin: 0 0 1.8rem;
+    }
+    .gallery img { width: 100%; height: 140px; object-fit: cover; display: block; background: #ddd; }
+    .gallery a:first-child { grid-column: 1 / -1; }
+    .gallery a:first-child img { height: 210px; }
     footer { border-top: 1px solid var(--line); padding: 1.3rem 0 2rem; font-size: 12px; color: var(--muted); }
   </style>
 </head>
 <body>
   <header class="hero">
     <div class="wrap">
-      <p class="eyebrow">Tres Norte S.A. · Viña del Mar · Lanzamiento comercial</p>
+      <p class="eyebrow">Viña del Mar · Lanzamiento comercial</p>
       <h1>3 Norte 88<br>Esquina 6 Poniente</h1>
       <p class="sub">Venta del dominio. 335,44 m² en esquina de alta visibilidad, a pasos del Casino de Viña del Mar. Dominio limpio. Listo para operar o invertir.</p>
       <div class="hero-meta">
@@ -58,24 +92,43 @@
       </div>
     </div>
   </header>
+
   <main>
     <div class="wrap">
       <p class="section-title">01 · Por qué este activo</p>
       <h2>Esquina premium con flujo real</h2>
       <p class="lead">Calle 3 Norte N° 88 esquina 6 Poniente, Barrio Poniente de Viña del Mar. No es un local más: es un inmueble de esquina con dominio limpio, superficie consolidada y ubicación de alto tráfico turístico y gastronómico.</p>
-      <div class="pitch">A pasos del <strong>Casino de Viña del Mar</strong>, en el eje comercial-turístico del sector. Alta visibilidad, doble frente de esquina, uso comercial gastronómico verificable. Ideal para comprador que busca activo sólido, no promesa.</div>
+
+      <div class="pitch">
+        A pasos del <strong>Casino de Viña del Mar</strong>, en el eje comercial-turístico del sector. Alta visibilidad, doble frente de esquina, uso comercial gastronómico verificable. Ideal para comprador que busca activo sólido, no promesa.
+      </div>
+
       <div class="stats">
         <div class="stat"><b>335,44 m²</b><span>Edificada total</span></div>
         <div class="stat"><b>Esquina</b><span>3 Nte / 6 Pte</span></div>
         <div class="stat"><b>Casino</b><span>Cercanía directa</span></div>
         <div class="stat"><b>A convenir</b><span>Precio</span></div>
       </div>
+
+      <div class="gallery">
+        <a href="fotos/salon-1.jpg" target="_blank" rel="noopener"><img src="fotos/salon-1.jpg" alt="Salón 3 Norte 88"></a>
+        <a href="fotos/salon-2.jpg" target="_blank" rel="noopener"><img src="fotos/salon-2.jpg" alt="Salón amplio"></a>
+        <a href="fotos/salon-3.jpg" target="_blank" rel="noopener"><img src="fotos/salon-3.jpg" alt="Salón"></a>
+        <a href="fotos/estanteria.jpg" target="_blank" rel="noopener"><img src="fotos/estanteria.jpg" alt="Estantería"></a>
+        <a href="fotos/sillon.jpg" target="_blank" rel="noopener"><img src="fotos/sillon.jpg" alt="Sillón"></a>
+      </div>
+
       <div class="loc">
         <h3>Ubicación</h3>
         <p><strong>3 Norte 88 esquina 6 Poniente</strong>, Viña del Mar. Sector Barrio Poniente, zona de alto flujo peatonal y vehicular ligada al Casino y al circuito turístico de la ciudad.</p>
         <p>1° piso salón 132 m² · 2° piso salón 60 m² · subterráneo de apoyo · cocina y servicios ya configurados.</p>
-        <p><a href="https://maps.google.com/?q=3+Norte+88,+Viña+del+Mar" target="_blank" rel="noopener">→ Ver en Google Maps</a></p>
+        <p><a href="https://maps.google.com/?q=3+Norte+88,+Viña+del+Mar" target="_blank" rel="noopener">→ Abrir en Google Maps</a></p>
       </div>
+
+      <div class="mapwrap">
+        <iframe title="Ubicación 3 Norte 88" src="https://maps.google.com/maps?q=3%20Norte%2088%20Vi%C3%B1a%20del%20Mar&t=&z=16&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
       <p class="section-title">02 · Datos del inmueble</p>
       <h2>Dominio y superficie</h2>
       <table class="data">
@@ -83,31 +136,35 @@
         <tr><th>Dirección</th><td>3 Norte N° 88 esquina 6 Poniente, Viña del Mar</td></tr>
         <tr><th>Superficie total</th><td>335,44 m² edificados</td></tr>
         <tr><th>Distribución</th><td>1° piso 132 m² · 2° piso 60 m² · subterráneo de apoyo · cocina y zonas de servicio</td></tr>
-        <tr><th>Propietario</th><td>Tres Norte S.A. · RUT 76.169.259-3</td></tr>
         <tr><th>Rol de avalúo</th><td>037-00022-079 · Comuna de Viña del Mar</td></tr>
         <tr><th>Inscripción CBR</th><td>N° 7108252 del 21 de octubre de 2024</td></tr>
         <tr><th>CIP</th><td>Comercial gastronómico (verificable)</td></tr>
         <tr><th>Precio</th><td>A convenir · se conversa con el intermediario</td></tr>
       </table>
+
       <div class="docs">
-        <h3>Documentación de respaldo</h3>
-        <a href="https://docs.google.com/document/d/1FAoLWeBLaUQVmKEuD9ewWX0ojtfayOd1QRXKOb_i9Ss/edit" target="_blank" rel="noopener">→ Expediente completo · Alzamiento y dominio</a>
-        <a href="https://drive.google.com/open?id=1Ttjg9lIMQSaVIK-dp2A64o4uNzbY-04x5RqDjZd-h-U" target="_blank" rel="noopener">→ Análisis de dominio / Restitución</a>
-        <a href="https://drive.google.com/drive/folders/1MPwhX6i2u03ceMM6cEP_kNjDh-G0LSg-" target="_blank" rel="noopener">→ Carpeta de antecedentes (Drive)</a>
-        <a href="https://maps.google.com/?q=3+Norte+88,+Viña+del+Mar" target="_blank" rel="noopener">→ Ubicación en Google Maps</a>
+        <h3>Enlaces ordenados</h3>
+        <a href="https://maps.google.com/?q=3+Norte+88,+Viña+del+Mar" target="_blank" rel="noopener">1 · Ver en Maps</a>
+        <a href="https://docs.google.com/document/d/1FAoLWeBLaUQVmKEuD9ewWX0ojtfayOd1QRXKOb_i9Ss/edit" target="_blank" rel="noopener">2 · Expediente de alzamiento</a>
+        <a href="https://drive.google.com/open?id=1Ttjg9lIMQSaVIK-dp2A64o4uNzbY-04x5RqDjZd-h-U" target="_blank" rel="noopener">3 · Análisis de dominio</a>
+        <a href="https://drive.google.com/drive/folders/1MPwhX6i2u03ceMM6cEP_kNjDh-G0LSg-" target="_blank" rel="noopener">4 · Carpeta de antecedentes</a>
       </div>
+
       <div class="cta">
-        <p class="label">Contacto · Lanzamiento</p>
-        <strong>Tres Norte S.A.</strong>
-        <p style="margin-top:0.4rem">Intermediario de colocación: <strong>Hugo Favilla</strong></p>
-        <p class="note">Precio y condiciones se conversan con el intermediario. Visitas coordinadas.</p>
+        <p class="label">Contacto</p>
+        <strong>Hugo</strong>
+        <p class="role">Intermediario de colocación</p>
+        <p><a href="mailto:hfavilla@nieny.cl">hfavilla@nieny.cl</a></p>
+        <a class="wa" href="https://wa.me/56984198953" target="_blank" rel="noopener">WhatsApp</a>
+        <p class="note">Precio y condiciones se conversan con Hugo. Visitas coordinadas.</p>
       </div>
-    </div>
+</div>
   </main>
+
   <footer>
     <div class="wrap">
-      3 Norte 88 · Viña del Mar · Tres Norte S.A. 76.169.259-3<br>
-      Venta del dominio · Precio a convenir · Contacto a través del intermediario
+      3 Norte 88 · Viña del Mar<br>
+      Venta del dominio · Precio a convenir · Contacto: Hugo
     </div>
   </footer>
 </body>

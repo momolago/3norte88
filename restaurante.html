@@ -3,28 +3,43 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>3 Norte 88 · Local Gastronómico</title>
-  <meta name="description" content="Local gastronómico habilitado en 3 Norte 88, Viña del Mar. 175 comensales · 44 mesas · Cocina instalada.">
+  <title>3 Norte 88 · Local Gastronómico · Viña del Mar</title>
+  <meta name="description" content="Local gastronómico 3 Norte 88 esquina 6 Poniente. 175 comensales, 44 mesas, cocina instalada. A pasos del Casino. Renta a convenir.">
   <style>
-    :root { --ink: #161310; --cream: #f4efe6; --wine: #6e2b28; --gold: #b8945a; --gold-soft: #d4bc8a; --muted: #6b635a; --line: #e0d6c8; --white: #fffdf9; }
+    :root {
+      --ink: #161310; --cream: #f4efe6; --wine: #6e2b28; --gold: #b8945a;
+      --gold-soft: #d4bc8a; --muted: #6b635a; --line: #e0d6c8; --white: #fffdf9;
+    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; background: var(--cream); color: var(--ink); line-height: 1.55; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: var(--cream); color: var(--ink); line-height: 1.55; font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
     .wrap { width: min(880px, calc(100% - 2rem)); margin: 0 auto; }
     .hero { background: var(--ink); color: var(--cream); padding: 2.6rem 0 2.2rem; }
     .hero .eyebrow { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-soft); margin-bottom: 0.9rem; }
     .hero h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; font-size: clamp(1.9rem, 6vw, 2.8rem); line-height: 1.15; margin-bottom: 0.85rem; }
-    .hero .sub { font-size: 1rem; color: #cfc4b6; max-width: 32em; line-height: 1.5; }
+    .hero .sub { font-size: 1.05rem; color: #cfc4b6; max-width: 36em; line-height: 1.5; }
     .hero-meta { display: flex; flex-wrap: wrap; gap: 1.2rem 1.6rem; margin-top: 1.8rem; padding-top: 1.3rem; border-top: 1px solid #2e2a25; font-size: 13px; color: #b8aea2; }
     .hero-meta strong { color: var(--gold-soft); font-weight: 500; }
     main { padding: 2.2rem 0 2.8rem; }
     .section-title { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--wine); margin-bottom: 0.5rem; }
     h2 { font-family: Georgia, serif; font-weight: 500; font-size: 1.5rem; margin-bottom: 0.75rem; line-height: 1.25; }
-    .lead { font-size: 1.02rem; color: #3a322b; max-width: 40em; margin-bottom: 1.6rem; }
+    .lead { font-size: 1.05rem; color: #3a322b; max-width: 40em; margin-bottom: 1.6rem; }
+    .pitch {
+      background: var(--white); border-left: 3px solid var(--wine);
+      padding: 1.1rem 1.2rem; margin-bottom: 1.8rem; font-size: 15px; color: #3a322b;
+    }
     .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 0 0 1.8rem; }
     @media (min-width: 560px) { .stats { grid-template-columns: repeat(4, 1fr); } }
     .stat { background: var(--white); padding: 1.15rem 0.9rem; text-align: center; }
-    .stat b { display: block; font-family: Georgia, serif; font-size: 1.4rem; font-weight: 500; margin-bottom: 0.25rem; }
+    .stat b { display: block; font-family: Georgia, serif; font-size: 1.35rem; font-weight: 500; margin-bottom: 0.25rem; }
     .stat span { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    .loc { background: var(--ink); color: var(--cream); padding: 1.4rem 1.2rem; margin: 0 0 1.8rem; }
+    .loc h3 { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-soft); margin-bottom: 0.7rem; }
+    .loc p { font-size: 14.5px; color: #cfc4b6; margin-bottom: 0.6rem; line-height: 1.5; }
+    .loc a { color: var(--gold-soft); }
     .highlight { background: var(--white); border: 1px solid var(--line); padding: 1.3rem 1.2rem; margin-bottom: 1.2rem; }
     .highlight h3 { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--wine); margin-bottom: 0.7rem; }
     .highlight ul { list-style: none; font-size: 14.5px; }
@@ -37,25 +52,46 @@
     .data { width: 100%; border-collapse: collapse; margin: 1.6rem 0; font-size: 14.5px; }
     .data th, .data td { text-align: left; vertical-align: top; padding: 0.75rem 0.3rem; border-bottom: 1px solid var(--line); }
     .data th { width: 36%; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
-    .docs { background: var(--ink); color: var(--cream); padding: 1.4rem 1.2rem; margin: 0 0 1.8rem; }
-    .docs h3 { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-soft); margin-bottom: 0.9rem; }
-    .docs a { display: block; color: var(--gold-soft); text-decoration: none; padding: 0.5rem 0; border-bottom: 1px solid #2e2a25; font-size: 14.5px; word-break: break-word; }
+    .docs { background: var(--white); border: 1px solid var(--line); padding: 1.3rem 1.2rem; margin: 0 0 1.8rem; }
+    .docs h3 { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--wine); margin-bottom: 0.8rem; }
+    .docs a { display: block; color: var(--wine); text-decoration: none; padding: 0.45rem 0; border-bottom: 1px solid var(--line); font-size: 14.5px; }
     .docs a:last-child { border-bottom: none; }
-    .docs a:active, .docs a:hover { color: #fff; }
     .cta { background: var(--white); border: 1px solid var(--line); padding: 1.5rem 1.3rem; }
     .cta .label { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
-    .cta strong { display: block; font-size: 1.15rem; margin-bottom: 0.3rem; }
+    .cta strong { display: block; font-size: 1.15rem; margin-bottom: 0.15rem; }
+    .cta .role { font-size: 13px; color: var(--muted); margin-bottom: 0.7rem; }
     .cta a { color: var(--wine); text-decoration: none; border-bottom: 1px solid var(--gold); }
+    .cta .wa {
+      display: inline-block;
+      margin-top: 0.9rem;
+      background: #128C7E;
+      color: #fff !important;
+      border-bottom: none !important;
+      padding: 0.75rem 1.15rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
     .cta .note { margin-top: 1rem; font-size: 13px; color: var(--muted); }
+    .mapwrap { margin: 0 0 1.8rem; border: 1px solid var(--line); overflow: hidden; background: var(--white); }
+    .mapwrap iframe { display: block; width: 100%; height: 240px; border: 0; }
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin: 0 0 1.8rem;
+    }
+    .gallery img { width: 100%; height: 140px; object-fit: cover; display: block; background: #ddd; }
+    .gallery a:first-child { grid-column: 1 / -1; }
+    .gallery a:first-child img { height: 210px; }
     footer { border-top: 1px solid var(--line); padding: 1.3rem 0 2rem; font-size: 12px; color: var(--muted); }
   </style>
 </head>
 <body>
   <header class="hero">
     <div class="wrap">
-      <p class="eyebrow">Tres Norte S.A. · Viña del Mar</p>
-      <h1>Local gastronómico<br>habilitado</h1>
-      <p class="sub">3 Norte 88 esquina 6 Poniente. 175 comensales · 44 mesas · Cocina instalada. Ideal para operador que busca ubicación consolidada sin partir de cero.</p>
+      <p class="eyebrow">Viña del Mar · Lanzamiento comercial</p>
+      <h1>Local gastronómico<br>listo para operar</h1>
+      <p class="sub">3 Norte 88 esquina 6 Poniente. 175 comensales · 44 mesas · cocina instalada. A pasos del Casino de Viña del Mar. El operador entra y trabaja.</p>
       <div class="hero-meta">
         <div><strong>Operación</strong> · Arriendo gastronómico</div>
         <div><strong>Capacidad</strong> · 175 comensales</div>
@@ -63,17 +99,44 @@
       </div>
     </div>
   </header>
+
   <main>
     <div class="wrap">
-      <p class="section-title">01 · El local</p>
-      <h2>Listo para operar</h2>
-      <p class="lead">Local comercial gastronómico en esquina premium del Barrio Poniente. CIP gastronómico. Dos salones + cocina completa + subterráneo de apoyo. El operador se enfoca en el negocio, no en la obra.</p>
+      <p class="section-title">01 · Por qué este local</p>
+      <h2>Ubicación que vende sola</h2>
+      <p class="lead">Esquina 3 Norte / 6 Poniente, Barrio Poniente. CIP gastronómico. Dos salones + cocina completa + subterráneo. No parte de cero: la estructura y el equipamiento ya están.</p>
+
+      <div class="pitch">
+        <strong>A pasos del Casino de Viña del Mar.</strong> Flujo turístico y local real. Esquina de alta visibilidad. Ideal para operador que busca capacidad (175 comensales), cocina armada y ubicación consolidada sin obra gruesa.
+      </div>
+
       <div class="stats">
         <div class="stat"><b>175</b><span>Comensales</span></div>
         <div class="stat"><b>44 mesas</b><span>30 + 14</span></div>
         <div class="stat"><b>335,44 m²</b><span>Tres niveles</span></div>
-        <div class="stat"><b>A convenir</b><span>Renta</span></div>
+        <div class="stat"><b>Casino</b><span>Cercanía directa</span></div>
       </div>
+
+      <div class="gallery">
+        <a href="fotos/salon-1.jpg" target="_blank" rel="noopener"><img src="fotos/salon-1.jpg" alt="Salón 3 Norte 88"></a>
+        <a href="fotos/salon-2.jpg" target="_blank" rel="noopener"><img src="fotos/salon-2.jpg" alt="Salón amplio"></a>
+        <a href="fotos/salon-3.jpg" target="_blank" rel="noopener"><img src="fotos/salon-3.jpg" alt="Salón"></a>
+        <a href="fotos/estanteria.jpg" target="_blank" rel="noopener"><img src="fotos/estanteria.jpg" alt="Estantería"></a>
+        <a href="fotos/sillon.jpg" target="_blank" rel="noopener"><img src="fotos/sillon.jpg" alt="Sillón"></a>
+        <a href="fotos/plano.jpg" target="_blank" rel="noopener"><img src="fotos/plano.jpg" alt="Plano del local"></a>
+      </div>
+
+      <div class="loc">
+        <h3>Ubicación y superficie</h3>
+        <p><strong>3 Norte 88 esquina 6 Poniente</strong>, Viña del Mar. Sector de alto flujo ligado al Casino y al circuito turístico-gastronómico.</p>
+        <p>Comedor 1° piso 132 m² (120 pax / 30 mesas) · Comedor 2° piso 60 m² (55 pax / 14 mesas) · Cocina por zonas · Subterráneo de apoyo.</p>
+        <p><a href="https://maps.google.com/?q=3+Norte+88,+Viña+del+Mar" target="_blank" rel="noopener">→ Abrir en Google Maps</a></p>
+      </div>
+
+      <div class="mapwrap">
+        <iframe title="Ubicación 3 Norte 88" src="https://maps.google.com/maps?q=3%20Norte%2088%20Vi%C3%B1a%20del%20Mar&t=&z=16&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
       <div class="highlight">
         <h3>Salones</h3>
         <ul>
@@ -82,8 +145,10 @@
           <li>Subterráneo · Bodega y apoyo operativo</li>
         </ul>
       </div>
+
       <p class="section-title" style="margin-top:1.6rem">02 · Cocina por zonas</p>
       <h2>Equipamiento instalado</h2>
+
       <div class="zone">
         <h4>Zona de lavado y desconche</h4>
         <p class="meta">5,2 m² · 2 personas</p>
@@ -104,34 +169,37 @@
         <p class="meta">12 m² · 4 personas</p>
         <p>Cocina 6 platos con plancha · Campana extracción · Freidora · Horno convector · Parrilla · Freezer vertical · Freezer horizontal · Refrigerador · Mesón preparación · Lavamanos con jabón y alcohol</p>
       </div>
+
       <table class="data">
         <tr><th>Operación</th><td>Arriendo para operador gastronómico</td></tr>
         <tr><th>CIP</th><td>Gastronómico</td></tr>
-        <tr><th>Patentes</th><td>Comercial 243399-0 · Alcoholes 437177-K (titular Tres Norte S.A.)</td></tr>
-        <tr><th>Arrendador</th><td>Tres Norte S.A. · RUT 76.169.259-3</td></tr>
-        <tr><th>Representante</th><td>Giacomo Lagomarsino Soto · RUT 13.191.349-4</td></tr>
+        <tr><th>Patentes</th><td>Comercial 243399-0 · Alcoholes 437177-K</td></tr>
         <tr><th>Renta</th><td>A convenir · se conversa con el intermediario</td></tr>
       </table>
+
       <div class="docs">
-        <h3>Documentación de respaldo</h3>
-        <a href="https://docs.google.com/document/d/1FAoLWeBLaUQVmKEuD9ewWX0ojtfayOd1QRXKOb_i9Ss/edit" target="_blank" rel="noopener">→ Expediente completo · Alzamiento y dominio</a>
-        <a href="https://drive.google.com/open?id=1Ttjg9lIMQSaVIK-dp2A64o4uNzbY-04x5RqDjZd-h-U" target="_blank" rel="noopener">→ Análisis de dominio / Restitución</a>
-        <a href="https://drive.google.com/drive/folders/1MPwhX6i2u03ceMM6cEP_kNjDh-G0LSg-" target="_blank" rel="noopener">→ Carpeta de antecedentes (Drive)</a>
-        <a href="https://maps.google.com/?q=3+Norte+88,+Viña+del+Mar" target="_blank" rel="noopener">→ Ubicación en Google Maps</a>
+        <h3>Enlaces ordenados</h3>
+        <a href="https://maps.google.com/?q=3+Norte+88,+Viña+del+Mar" target="_blank" rel="noopener">1 · Ver en Maps</a>
+        <a href="https://docs.google.com/document/d/1FAoLWeBLaUQVmKEuD9ewWX0ojtfayOd1QRXKOb_i9Ss/edit" target="_blank" rel="noopener">2 · Expediente de alzamiento</a>
+        <a href="https://drive.google.com/open?id=1Ttjg9lIMQSaVIK-dp2A64o4uNzbY-04x5RqDjZd-h-U" target="_blank" rel="noopener">3 · Análisis de dominio</a>
+        <a href="https://drive.google.com/drive/folders/1MPwhX6i2u03ceMM6cEP_kNjDh-G0LSg-" target="_blank" rel="noopener">4 · Carpeta de antecedentes</a>
       </div>
+
       <div class="cta">
-        <p class="label">Contacto de decisión</p>
-        <strong>Giacomo Lagomarsino Soto</strong>
-        <p><a href="tel:+56992386660">+56 9 9238 6660</a> · <a href="mailto:momolagomarsino@gmail.com">momolagomarsino@gmail.com</a></p>
-        <p style="margin-top:0.55rem">Intermediario de colocación: Hugo Favilla</p>
-        <p class="note">Se coordina visita (incluye interiores y cocina). Renta a convenir.</p>
+        <p class="label">Contacto</p>
+        <strong>Hugo</strong>
+        <p class="role">Intermediario de colocación</p>
+        <p><a href="mailto:hfavilla@nieny.cl">hfavilla@nieny.cl</a></p>
+        <a class="wa" href="https://wa.me/56984198953" target="_blank" rel="noopener">WhatsApp</a>
+        <p class="note">Se coordina visita (incluye interiores y cocina) con Hugo. Renta a convenir.</p>
       </div>
-    </div>
+</div>
   </main>
+
   <footer>
     <div class="wrap">
-      3 Norte 88 · Viña del Mar · Tres Norte S.A. 76.169.259-3<br>
-      Renta a convenir · Contacto único de decisión: Giacomo
+      3 Norte 88 · Viña del Mar<br>
+      Arriendo gastronómico · Renta a convenir · Contacto: Hugo
     </div>
   </footer>
 </body>
