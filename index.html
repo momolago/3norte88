@@ -2,33 +2,144 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>3 Norte 88 · Viña del Mar</title>
+  <meta name="description" content="Dos operaciones en 3 Norte 88 esquina 6 Poniente, Viña del Mar: venta del inmueble y local gastronómico. Contacto: Hugo.">
   <style>
-    body { font-family: -apple-system, Helvetica, Arial, sans-serif; background: #f4efe6; color: #161310; margin: 0; padding: 2rem 1.5rem; }
-    .wrap { max-width: 480px; margin: 0 auto; }
-    h1 { font-family: Georgia, serif; font-weight: 500; font-size: 1.8rem; margin-bottom: 0.5rem; }
-    p { color: #6b635a; margin-bottom: 2rem; }
-    a.card {
-      display: block; background: #fffdf9; border: 1px solid #e0d6c8; padding: 1.4rem 1.3rem;
-      margin-bottom: 1rem; text-decoration: none; color: inherit;
+    :root {
+      --ink: #161310; --cream: #f4efe6; --wine: #6e2b28; --gold: #b8945a;
+      --gold-soft: #d4bc8a; --muted: #6b635a; --line: #e0d6c8; --white: #fffdf9;
     }
-    a.card strong { display: block; font-size: 1.1rem; margin-bottom: 0.3rem; color: #6e2b28; }
-    a.card span { font-size: 0.9rem; color: #6b635a; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: var(--cream); color: var(--ink); line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    .hero { background: var(--ink); color: var(--cream); padding: 2.8rem 1.4rem 2.4rem; }
+    .hero .wrap { width: min(720px, 100%); margin: 0 auto; }
+    .eyebrow { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-soft); margin-bottom: 0.9rem; }
+    h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; font-size: clamp(1.9rem, 6vw, 2.7rem); line-height: 1.15; margin-bottom: 0.7rem; }
+    .sub { color: #cfc4b6; max-width: 34em; font-size: 1.05rem; }
+    main { padding: 2rem 1.4rem 3rem; }
+    .wrap { width: min(720px, 100%); margin: 0 auto; }
+    .grid { display: grid; gap: 1rem; }
+    @media (min-width: 640px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .card {
+      background: var(--white); border: 1px solid var(--line);
+      padding: 1.45rem 1.3rem; display: flex; flex-direction: column; min-height: 280px;
+    }
+    .card .k { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--wine); margin-bottom: 0.55rem; }
+    .card h2 { font-family: Georgia, serif; font-weight: 500; font-size: 1.35rem; line-height: 1.25; margin-bottom: 0.55rem; }
+    .card p { color: var(--muted); font-size: 14.5px; flex: 1; margin-bottom: 1.1rem; }
+    .btn {
+      display: inline-block; text-align: center; text-decoration: none;
+      background: var(--ink); color: var(--cream); padding: 0.85rem 1rem;
+      font-size: 14px; font-weight: 600; letter-spacing: 0.03em; min-height: 44px;
+    }
+    .btn:active { opacity: 0.88; }
+    .btn.ghost {
+      background: transparent; color: var(--wine); border: 1px solid var(--line);
+      margin-top: 0.55rem;
+    }
+    .share {
+      margin-top: 1.8rem; background: var(--white); border: 1px solid var(--line);
+      padding: 1.3rem 1.2rem;
+    }
+    .share h3 { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--wine); margin-bottom: 0.7rem; }
+    .share p { font-size: 14px; color: #3a322b; margin-bottom: 0.9rem; }
+    .row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .row button, .row a {
+      font: inherit; cursor: pointer; border: 1px solid var(--line);
+      background: var(--cream); color: var(--ink); padding: 0.7rem 0.9rem;
+      min-height: 44px; text-decoration: none; font-size: 13.5px;
+    }
+    .note { margin-top: 1.4rem; font-size: 13px; color: var(--muted); }
+    footer { border-top: 1px solid var(--line); padding: 1.3rem 1.4rem 2rem; font-size: 12px; color: var(--muted); }
+    footer .wrap { width: min(720px, 100%); margin: 0 auto; }
+    .toast {
+      display: none; position: fixed; bottom: 1.2rem; left: 50%; transform: translateX(-50%);
+      background: var(--ink); color: var(--cream); padding: 0.7rem 1rem; font-size: 13px;
+    }
+    .toast.on { display: block; }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>3 Norte 88</h1>
-    <p>Esquina 6 Poniente · Viña del Mar</p>
-    <a class="card" href="inmueble.html">
-      <strong>Venta del inmueble</strong>
-      <span>Dominio limpio · 335,44 m²</span>
-    </a>
-    <a class="card" href="restaurante.html">
-      <strong>Local gastronómico</strong>
-      <span>175 comensales · 44 mesas · CIP gastronómico</span>
-    </a>
-  </div>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Viña del Mar · Lanzamiento comercial</p>
+      <h1>3 Norte 88<br>Esquina 6 Poniente</h1>
+      <p class="sub">Dos operaciones sobre el mismo activo. Una ficha para comprador del inmueble. Otra para operador gastronómico. Contacto: Hugo.</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="grid">
+        <article class="card">
+          <p class="k">Operación 1</p>
+          <h2>Venta del inmueble</h2>
+          <p>Dominio limpio. 335,44 m² en esquina. A pasos del Casino. Precio a convenir.</p>
+          <a class="btn" href="inmueble.html">Abrir ficha de venta</a>
+          <button class="btn ghost" type="button" data-copy="inmueble">Copiar enlace de venta</button>
+        </article>
+        <article class="card">
+          <p class="k">Operación 2</p>
+          <h2>Local gastronómico</h2>
+          <p>175 comensales · 44 mesas · cocina instalada. CIP gastronómico. Renta a convenir.</p>
+          <a class="btn" href="restaurante.html">Abrir ficha gastronómica</a>
+          <button class="btn ghost" type="button" data-copy="restaurante">Copiar enlace gastronómico</button>
+        </article>
+      </div>
+
+      <div class="share">
+        <h3>Para compartir (enlace doble)</h3>
+        <p>Use esta portada, o envíe las dos fichas por separado. Ningún enlace pide descarga ni registro.</p>
+        <div class="row">
+          <button type="button" data-copy="portada">Copiar portada</button>
+          <button type="button" data-copy="ambos">Copiar ambos enlaces</button>
+          <a id="waShare" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+        </div>
+        <p class="note">Contacto de colocación: Hugo · hfavilla@nieny.cl · WhatsApp en cada ficha.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      3 Norte 88 · Viña del Mar · Material de colocación · Mejoras bienvenidas en el repositorio
+    </div>
+  </footer>
+  <div class="toast" id="toast">Enlace copiado</div>
+
+  <script>
+    const BASE = "https://htmlpreview.github.io/?https://raw.githubusercontent.com/momolago/3norte88/main/";
+    const urls = {
+      portada: BASE + "index.html",
+      inmueble: BASE + "inmueble.html",
+      restaurante: BASE + "restaurante.html"
+    };
+    const ambos = "Venta del inmueble:\n" + urls.inmueble + "\n\nLocal gastronómico:\n" + urls.restaurante;
+    const wa = "https://wa.me/?text=" + encodeURIComponent(
+      "3 Norte 88 · Viña del Mar\n\n" + ambos + "\n\nContacto: Hugo · hfavilla@nieny.cl"
+    );
+    document.getElementById("waShare").href = wa;
+
+    function copy(text, label) {
+      navigator.clipboard.writeText(text).then(function () {
+        var t = document.getElementById("toast");
+        t.textContent = label || "Enlace copiado";
+        t.classList.add("on");
+        setTimeout(function () { t.classList.remove("on"); }, 1600);
+      });
+    }
+    document.querySelectorAll("[data-copy]").forEach(function (el) {
+      el.addEventListener("click", function () {
+        var k = el.getAttribute("data-copy");
+        if (k === "ambos") copy(ambos, "Ambos enlaces copiados");
+        else copy(urls[k], "Enlace copiado");
+      });
+    });
+  </script>
 </body>
 </html>
